@@ -1,0 +1,12 @@
+language: rust
+os: linux-ppc64le
+sudo: required
+
+before_install:
+  - sudo apt-get update
+
+script:
+- git clone https://github.com/BurntSushi/ripgrep
+- cd ripgrep
+- cargo build --release
+- ./target/release/rg --version
