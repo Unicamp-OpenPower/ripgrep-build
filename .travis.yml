@@ -1,12 +1,10 @@
-language: rust
 os: linux-ppc64le
 dist: xenial
 sudo: required
-rust:
-  - 1.0.0
 
 before_install:
   - sudo apt-get update
+  - curl https://sh.rustup.rs -sSf | sh -y
 
 script:
 - git clone https://github.com/BurntSushi/ripgrep
