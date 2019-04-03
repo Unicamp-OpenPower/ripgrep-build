@@ -112,17 +112,18 @@ notifications:
     on_success: never
 
 
-os: linux-ppc64le
-dist: xenial
-sudo: required
+#*****************************************************
+#os: linux-ppc64le
+#dist: xenial
+#sudo: required
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y libc6
-  - curl https://sh.rustup.rs -sSf | sh
+#before_install:
+#  - sudo apt-get update
+#  - sudo apt-get install -y libc6
+#  - curl https://sh.rustup.rs -sSf | sh
 
-script:
-- git clone https://github.com/BurntSushi/ripgrep
-- cd ripgrep
-- cargo build --release
-- ./target/release/rg --version
+#script:
+#- git clone https://github.com/BurntSushi/ripgrep
+#- cd ripgrep
+#- cargo build --release
+#- ./target/release/rg --version
